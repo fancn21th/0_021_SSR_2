@@ -11,13 +11,18 @@ class App extends React.Component {
 
   render() {
     return (
-      <ul>
-      {
-        this.props.gists.map(gist => (
-          <li key={gist.id}>{gist.description}</li>
-        ))
-      }
-      </ul>
+      <div>
+        <h3>
+          It is pretty awesome to write a React SSR app in such simple way
+        </h3>
+        <ul>
+          {
+            this.props.gists.map(gist => (
+              <li key={gist.id}>{gist.description}</li>
+            ))
+          }
+        </ul>
+      </div>
     )
   }
 }
